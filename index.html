@@ -24,11 +24,6 @@
 		<a href="./zhcn.html">Chinese</a>
 		<a href="#" onClick="wrong">English</a>
 	</div>
-<body style="background-image: url(./FILE/image/BG2.jpg);
-
-background-size: 100% ;
-
-background-attachment: fixed;" >
 
 <script type="text/javascript">
   window.onload = function(){ //页面加载完成时实现
@@ -59,12 +54,18 @@ background-attachment: fixed;" >
     weekday[4]="星期四";
     weekday[5]="星期五";
     weekday[6]="星期六";
-    document.getElementById("show").innerHTML=""+year+"年"+month+"月"+date+"日 "+ weekday[day] +h+":"+m+":"+s;
+    document.getElementById("show").innerHTML=""+year+"/"+month+"/"+date+"/ "+ weekday[day] +h+":"+m+":"+s;
     t=setTimeout('showTime()',1000)  //设置定时器，每隔1s调用一次函数从而实现动态效果
   }
 </script>
 <style>
-
+	body{
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-image: url("FILES/image/BG2.jpeg");
+		background-size: 100%100%;
+		
+	}
 h1 {
   font-size: 70px;
   text-align: center;
