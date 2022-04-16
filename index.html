@@ -17,14 +17,19 @@
 </div>
 	<div id="Home">
 		<h2>——————GameLink——————</h2>
-		<a href="./game.html"><strong>Stability!</strong>Github Pages</a><br>
-		<a href="https://47.101.51.98/qiaoyi/"><strong>FAST!</strong>China CDN</a>
+		<button onclick="window.location.href='https://erico-awa.github.io/erico/game.html'" class="button button1"><strong>唯一更新的</strong>Github Pages</button><br>
+		<button onclick="alertTips()'" class="button button1"><strong>咕了咕了</strong>上海服务器</button><br>
 		<h2>--------Setting things--------</h2>
 		<h2>Language Choose</h2>
 		<a href="./zhcn.html">Chinese</a>
 		<a href="#" onClick="wrong">English</a>
 	</div>
-
+<script>
+	function alertTips(){
+		alert("温馨提示！请不要随意传播本网站地址！能活多久全靠你们！")
+	}
+	
+	</script>
 <script type="text/javascript">
   window.onload = function(){ //页面加载完成时实现
     showTime();
@@ -59,6 +64,19 @@
   }
 </script>
 <style>
+	.button {
+    background-color: #22DFEF; 
+    border: none;
+    color: white;
+    padding: 45px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1 {font-size:35px;}
 	body{
 		background-attachment: fixed;
 		background-repeat: no-repeat;
