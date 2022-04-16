@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Erico HomePage</title>
+<style type="text/css">
+.Link {
+}
+</style>
+</head>
+
+<body>
+<h1>艾瑞克的主页 </h1>
+<h2>欢迎!本页面在GitHub Pages上作为永久引导页更新！ </h2>
+		<div class="showTime">
+  <div id="show">当前时间为：</div>
+</div>
+	<div id="Home">
+		<h2>——————区服选择——————</h2>
+		<a href="./game.html"><strong>稳定!有些网会很慢</strong>Github Pages</a><br>
+		<a href="https://47.101.51.98/qiaoyi/"><strong>超快!12月将会停止支持!</strong>阿里云上海</a>
+		<h2>--------没屌用的设置--------</h2>
+		<h2>语言切换</h2>
+		<a href="./zhcn.html">Chinese</a>
+		<a href="./homepage.html">English</a>
+	</div>
+
+<script type="text/javascript">
+  window.onload = function(){ //页面加载完成时实现
+    showTime();
+  }
+  function checkTime(i){  //补位处理
+     if(i<10){
+         i="0"+i;
+     } 
+     return i;
+  }
+  function showTime(){ //时间显示函数
+    var now=new Date(); //创建一个Date对象
+    var year= now.getFullYear() ; //年
+    var month=now.getMonth()+1 ; //月份（从0开始），所以+1
+    var date= now.getDate()  ; //日（1-31）
+    var day=now.getDay();  //星期（0-6）
+    var h= now.getHours()  ; //小时（0-23）
+    var m= now.getMinutes()  ;  //分钟（0-59）
+    var s=  now.getSeconds()  ;  //秒
+    m=checkTime(m) 
+    s=checkTime(s)
+    var weekday=new Array(7)  //星期数进一处理
+    weekday[0]="星期日";
+    weekday[1]="星期一";
+    weekday[2]="星期二";
+    weekday[3]="星期三";
+    weekday[4]="星期四";
+    weekday[5]="星期五";
+    weekday[6]="星期六";
+    document.getElementById("show").innerHTML=""+year+"年"+month+"月"+date+"日 "+ weekday[day] +h+":"+m+":"+s;
+    t=setTimeout('showTime()',1000)  //设置定时器，每隔1s调用一次函数从而实现动态效果
+  }
+</script>
+<style>
+body {background:url("./FILES/image/BG2.jpeg") ;
+	background-size:100%;
+	background-attachment: fixed}
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+	text-align: center;
+}
+p {
+  font-size: 14px;
+	text-align: center;
+}
+		div{
+			text-align:center;
+			font-size: 50px;
+		}
+    </style>
+</body>
+</html>
