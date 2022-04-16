@@ -14,7 +14,7 @@ let __Time = 20;
 let __k = 4;
 let _close = false;
 let _fsj = false;
-var url = 'https://github.com/Erico-awa/erico/blob/main/FILES/GDGYX/static/click.png?raw=true';
+var url = 'https://github.com/Erico-awa/erico/blob/main/FILES/GDGYX/static/click.png';
 
 function isplaying() {
     return document.getElementById('welcome').style.display == 'none' &&
